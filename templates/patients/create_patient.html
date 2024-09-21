@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Patient{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Create Patient Details</h2>
+    <form method="post">
+        <table class="patient-table">
+            {% csrf_token %}
+            {{ form.as_table }}
+        </table>
+        <br/>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}

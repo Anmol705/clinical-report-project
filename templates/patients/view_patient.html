@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}View Patient{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Patient Details</h2>
+        <table class="patient-table">
+        <tr><th>Name</th><td>{{ patient.first_name }} {{ patient.last_name }}</td></tr>
+    </table>
+    <h2>Clinical Data</h2>
+    <table class="patient-table">
+            <tr>
+                <th>Date/Time</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Component Type</th>
+                <th>Component Value</th>
+            </tr>
+            {% for data in clinical_data %}
+            <tr>
+                <td>{{ data.measuredDateTime}}</td>
+                <td>{{ data.height }}</td>
+                <td>{{ data.weight }}</td>
+                <td>{{ data.componentName }}</td>
+                <td>{{ data.componentValue }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    <br/>
+    {% if bmi %}
+        <h4>Latest BMI: {{ bmi }}</h4>
+    {% endif %}
+</div>
+{% endblock %}

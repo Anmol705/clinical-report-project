@@ -1,0 +1,342 @@
+/* Global Styles */
+
+
+.logo h1 {
+    display: unset;
+}
+
+/* Header Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.header-container .logo img {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+}
+
+.header-container h1 {
+    margin-left: 10px;
+}
+
+.header-right {
+    font-size: 1.2rem;
+}
+
+.ticker {
+    position: relative;
+    background-color: #FF5733;
+    padding: 3px 0;
+    color: white;
+    font-size: 1.1rem;
+    overflow: hidden; /* Ensure text doesn't overflow */
+}
+
+#scrolling-text {
+    position: unset;
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scroll 15s linear infinite; /* Adjust speed as needed */
+    right: 100%; /* Start off-screen */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start from right */
+    }
+    100% {
+        transform: translateX(-100%); /* End at left */
+    }
+}
+
+.ticker p {
+    margin: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-container {
+    font-size: 0.9rem;
+}
+
+/* Content */
+.content {
+    margin: 80px 20px 60px;
+}
+
+
+/* Patient Table Styles */
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+.patient-table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+.patient-table th, .patient-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.patient-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.patient-table tr:hover {
+    background-color: #d1ecf1;
+}
+
+.patient-table a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin: 0;
+    color: #333;
+}
+
+.login-container form {
+    margin-top: 20px;
+}
+
+.login-container form input[type="text"],
+.login-container form input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.login-container form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #5C67F2;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.login-container form input[type="submit"]:hover {
+    background-color: #4a54e1;
+}
+
+.login-container a {
+    display: block;
+    margin-top: 10px;
+    color: #5C67F2;
+    text-decoration: none;
+}
+/* CSS for User Icon and Dropdown */
+.user-icon-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #f1f1f1;
+    cursor: pointer;
+}
+
+.user-icon:hover {
+    border-color: #007bff; /* Add hover effect */
+}
+
+.user-name {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #007bff;
+    color: blue;
+}
+
+/* Show dropdown on hover */
+.user-icon-container:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Arrow */
+.dropdown-content:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0056b3;
+}
+
+/* Optional: Uniform button styles */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

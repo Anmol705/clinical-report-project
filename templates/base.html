@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Clinical Report{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="{% static 'images/logo.jpg' %}" alt="Clinic Logo"> <h1>Clinical Report</h1>
+
+            </div>
+            <div style="display: ruby" class="header-right">
+                <p id="current-time"></p>
+                {% if user.is_authenticated %}
+                    <div class="dropdown user-icon-container">
+                        <div class="logo">
+                        <img src="{% static 'images/icon.png' %}" style="height: 30px; width: 30px;" alt="User Icon"> <span>{{ user.first_name }}</span>
+                        </div>
+
+
+                        <div class="dropdown-content">
+                            <a href="{% url 'account_logout' %}">Sign Out</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{% url 'account_login' %}" class="btn btn-secondary">Login</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="ticker">
+            <p id="scrolling-text">Important Notice: Welcome to our clinic! Stay healthy and safe.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        {% block content %}
+        <!-- Content will go here -->
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 My Clinical Report. All rights reserved.</p>
+            <p>Terms and Conditions | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[bandit]
+exclude: setting.py
+exclude_dirs:
+  - .git
+  - migrations
+  - tests
+  - static
+  - media
+  - venv
+tests:
+  B101: true
+  B102: true
+  B309: true

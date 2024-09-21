@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}View Patient{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Patient Details</h2>
+
+    <table class="patient-table">
+        <tr><th>First Name</th><td>{{ patient.first_name }}</td></tr>
+        <tr><th>Last Name</th><td>{{ patient.last_name }}</td></tr>
+        <tr><th>Age</th><td>{{ patient.age }}</td></tr>
+    </table>
+    <br/>
+    <h2>Patient Clinical Data</h2>
+    <form method="post">
+        <table class="patient-table">
+            {% csrf_token %}
+            {{form.as_table}}
+        </table>
+        <br/>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}
