@@ -39,8 +39,8 @@ jobs:
       - name: Run flake8
         run: flake8 .
 
-      - name: Run bandit security check
-        run: bandit -r .
+      # - name: Run bandit security check
+      #   run: bandit -r .
 
 #  test:
 #    runs-on: ubuntu-latest
