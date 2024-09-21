@@ -1,7 +1,7 @@
 # Clinical Report Project
 
 ## Overview
-This project is a clinical report application developed in Django. It handles patient data, clinical information, and calculates BMI based on the latest data. The app is built using Python 3.11, Django, and integrates with [allauth](https://github.com/pennersr/django-allauth) for authentication.
+This project is a clinical report application developed in Django. It handles patient data, clinical information, and calculates BMI based on the latest data. The app is built using Python 3.12, Django, and integrates with [allauth](https://github.com/pennersr/django-allauth) for authentication.
 
 ## Features
 - Patient management: Add, update, and view patient details.
